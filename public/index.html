@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamara Private Chat Room</title>
+    <title>Private Chat Room</title>
 
     <style>
         * {
@@ -82,15 +82,19 @@
         }
 
         button {
-            padding: 12px 20px;
+            padding: 10px 15px; /* Pehle 12px 20px tha, chhota karne ke liye kam kiya */
             border: none;
             border-radius: 10px;
             background: #16a085;
             color: white;
-            font-size: 16px;
+            font-size: 14px; /* Pehle 16px tha */
             font-weight: bold;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
 
         button:hover {
             background: #12876f;
@@ -125,7 +129,7 @@
                 required
             >
 
-            <button type="submit">Bhejo</button>
+            <button type="submit">Send</button>
         </form>
 
     </div>
@@ -141,7 +145,7 @@
         const chatBox = document.getElementById("chat-box");
 
         // User ka naam
-        const username = prompt("Apna naam daalein:") || "Anonymous";
+        const username = prompt("Enter your Name:") || "Anonymous";
 
         // Message bhejna
         form.addEventListener("submit", function (e) {
